@@ -1,41 +1,53 @@
-# Session ID - Session Title
+# Scale Application Development with SAPUI5
+On this site you can find an overview about the available exercises, the respective solutions and live demos.
 
-## Description
+## The Workshop
+Just start with the first exercise [Getting Started](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex0/README.md) and then follow the link to the next excercise at the end of each chapter.
 
-This repository contains the material for the SAP TechEd 2021 session called Session ID - Session Title.  
+## Working With The Code
 
-## Overview
+These are the steps to get the working code for any of the exercises, in case you missed an exercise or could not resolve an error you encountered.
 
-This session introduces attendees to...
+NOTE: steps 1-6 are only required once. After they have been done, you can simply do steps 7 and 8 to open the code of a different exercise.
 
-## Requirements
+1. Go to SAP Business Application Studio
+2. Open a new Terminal (in the top menu bar, click on *Terminal* and select *New Terminal*)
+3. Go to folder `projects` (in the newly opened Terminal area at the bottom, enter `cd /home/user/projects` and hit the `Enter` key)
+4. Then, similarly, execute `git clone https://github.com/SAP-samples/teched2021-DEV160.git` in the Terminal
+5. Then, execute `cd teched2021-DEV160`
+6. Execute `git checkout code`
+7. In the top menu bar, click on *File* > *Open Workspace...*
+8. Select the `sensormanager` folder inside your desired exercise, e.g. `/projects/teched2021-DEV160/ex5/sensormanager` for exercise 5 and click `Open`
 
-The requirements to follow the exercises in this repository are...
+Once BAS has finished opening the workspace, the code implementing the selected exercise is available in the Project Explorer.
 
-## Exercises
+To run the code:
+1. Open a new Terminal again (*Terminal* > *New Terminal*)
+2. In the Terminal, execute `npm install`. This may take a while.
+3. Once finished, either:
+    - press the "play"-style triangle in the left-hand icon bar to open the Run Configurations and click the green triangle that appears when hovering `Start sensormanager` or:
+    - press the "debug" icon in the left-hand icon bar and press the green "Start Debugging" triangle
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+NOTE: you can execute roughly the same steps in your local development environment when you have VSCode installed. UI5 and this app do not require the usage of the Business Application Studio.
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
 
-  
-**OR** Link to the Tutorial Navigator for example...
+## Working With The Demo
+This is an easy job. Just click on the demo link of the desired exercise below.
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
+## Code And Demo
 
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
-
-## How to obtain support
-
-Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
-
-## License
-Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+| Exercise | | | |
+| :--- | --- | --- | --- |
+| Getting Started | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex0/README.md) | | |
+| Exercise 1 - Project Setup using Business Application Studio | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex1/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex1/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex1/sensormanager/webapp/index.html) |
+| Exercise 2 - Basic UI5 Configuration and View Creation | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex2/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex2/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex2/sensormanager/webapp/index.html) |
+| Exercise 3 - Show Sensor Content | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex3/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex3/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex3/sensormanager/webapp/index.html) |
+| Exercise 4 - Introduce Localization | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex4/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex4/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex4/sensormanager/webapp/index.html) |
+| Exercise 5 - Improve Visualization | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex5/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex5/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex5/sensormanager/webapp/index.html) |
+| Exercise 6 - Filtering with the IconTabBar | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex6/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex6/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex6/sensormanager/webapp/index.html) |
+| Exercise 7 - Fragment containing a SelectDialog | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex7/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex7/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex7/sensormanager/webapp/index.html) |
+| Exercise 8 - Second View with Navigation | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex8/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex8/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex8/sensormanager/webapp/index.html) |
+| Exercise 9 - Card with NumericHeader | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex9/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex9/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex9/sensormanager/webapp/index.html) |
+| Exercise 10 - Chart with DataBinding | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex10/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex10/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex10/sensormanager/webapp/index.html) |
+| Exercise 11 - Deployment to SAP BTP, Cloud Foundry runtime | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex11/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex11/TechEd2020) | |
+| Exercise 12 - Develop your own Control | [exercise](https://github.com/SAP-samples/teched2021-DEV160/tree/master/exercises/ex12/README.md) | [solution](https://github.com/SAP-samples/teched2021-DEV160/tree/code/ex12/) | [demo](https://SAP-samples.github.io/teched2021-DEV160/ex12/sensormanager/webapp/index.html) |
