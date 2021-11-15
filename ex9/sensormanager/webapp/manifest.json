@@ -5,13 +5,20 @@
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
-            "version": "1.0.0"
+            "version": "0.0.1"
         },
         "title": "{{appTitle}}",
         "description": "{{appDescription}}",
-        "resources": "resources.json",
-        "ach": "ach",
         "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "4.0"
+                }
+            },
             "sensorSource": {
                 "type": "JSON",
                 "uri": "./localService/sensors.json"
@@ -21,7 +28,7 @@
     "sap.ui": {
         "technology": "UI5",
         "icons": {
-            "icon": "sap-icon://task",
+            "icon": "",
             "favIcon": "",
             "phone": "",
             "phone@2": "",
@@ -36,18 +43,12 @@
     },
     "sap.ui5": {
         "flexEnabled": false,
-        "rootView": {
-            "viewName": "keepcool.sensormanager.view.App",
-            "type": "XML",
-            "async": true,
-            "id": "App"
-        },
         "dependencies": {
-            "minUI5Version": "1.93.0",
+            "minUI5Version": "1.96.0",
             "libs": {
                 "sap.ui.core": {},
-                "sap.m": {},
                 "sap.ui.layout": {},
+                "sap.m": {},
                 "sap.f": {},
                 "sap.suite.ui.microchart": {}
             }
@@ -60,9 +61,18 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "keepcool.sensormanager.i18n.i18n",
-                    "supportedLocales": ["de", "en"],
-                    "fallbackLocale": "en"
+                    "bundleName": "keepcool.sensormanager.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true,
+                    "groupId": "$direct"
                 }
             },
             "sensorModel": {
@@ -93,10 +103,11 @@
                 "target": ["TargetSensors"]
             },
             {
-                    "name": "RouteSensorStatus",
-                    "pattern": "sensor/{index}",
-                    "target": ["TargetSensorStatus"]
-            }],
+                "name": "RouteSensorStatus",
+                "pattern": "sensor/{index}",
+                "target": ["TargetSensorStatus"]
+            }
+            ],
             "targets": {
                 "TargetSensors": {
                     "viewType": "XML",
@@ -111,6 +122,12 @@
                     "viewLevel": 2
                 }
             }
+        },
+        "rootView": {
+            "viewName": "keepcool.sensormanager.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
         }
     },
     "sap.cloud": {

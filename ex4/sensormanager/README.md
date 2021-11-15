@@ -1,9 +1,9 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue Aug 31 2021 08:19:16 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Mon Nov 15 2021 15:52:54 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori|
-|**App Generator Version**<br>1.3.1|
+|**App Generator Version**<br>1.4.1|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Floorplan Used**<br>simple|
 |**Service Type**<br>None|
@@ -13,6 +13,8 @@
 |**Namespace**<br>keepcool|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>Latest|
+|**Enable Code Assist Libraries**<br>False|
+|**Add Eslint configuration**<br>False|
 |**Enable Telemetry**<br>True|
 
 ## sensormanager

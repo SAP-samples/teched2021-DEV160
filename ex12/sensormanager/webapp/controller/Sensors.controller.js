@@ -8,11 +8,13 @@ sap.ui.define([
     "use strict"
 
         return Controller.extend("keepcool.sensormanager.controller.Sensors", {
-            onInit: function () {
+            onInit: function() {
                 this._aCustomerFilters = [];
                 this._aStatusFilters = [];
                 this.getSensorModel().dataLoaded().then(function() {
-                    MessageToast.show(this.getOwnerComponent().getModel("i18n").getResourceBundle().getText("msgSensorDataLoaded"), { closeOnBrowserNavigation: false });
+                    MessageToast.show(
+                        this.getOwnerComponent().getModel("i18n").getResourceBundle().getText("msgSensorDataLoaded"),
+                        { closeOnBrowserNavigation: false });
                 }.bind(this));
             },
             getSensorModel: function(){
@@ -28,18 +30,6 @@ sap.ui.define([
                     return IconColor.Critical;
                 } else {
                     return IconColor.Negative;
-                }
-            },
-            formatThermometerColor: function(iTemperature) {
-                var oThreshold = this.getSensorModel().getProperty("/threshold");
-                if (!oThreshold) {
-                    return "black";
-                } else if (iTemperature < oThreshold.warm) {
-                    return "#1873B4"; // less obtrusive than the standard "blue"
-                } else if (iTemperature >= oThreshold.warm && iTemperature < oThreshold.hot) {
-                    return "orange";
-                } else {
-                    return "red";
                 }
             },
             onSensorSelect: function (oEvent) {
@@ -93,7 +83,19 @@ sap.ui.define([
             navToSensorStatus: function(oEvent) {
                 var iSensorIndex = oEvent.getSource().getBindingContext("sensorModel").getProperty("index");
                 this.getOwnerComponent().getRouter().navTo("RouteSensorStatus", {index: iSensorIndex});
-            }
+            },
+            formatThermometerColor: function(iTemperature) {
+                var oThreshold = this.getSensorModel().getProperty("/threshold");
+                if (!oThreshold) {
+                    return "black";
+                } else if (iTemperature < oThreshold.warm) {
+                    return "#1873B4"; // less obtrusive than the standard "blue"
+                } else if (iTemperature >= oThreshold.warm && iTemperature < oThreshold.hot) {
+                    return "orange";
+                } else {
+                    return "red";
+                }
+            },
         });
     }
 );

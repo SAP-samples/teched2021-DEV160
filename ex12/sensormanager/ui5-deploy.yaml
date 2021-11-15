@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
 specVersion: '2.4'
 metadata:
-  name: 'sensormanager'
+  name: keepcool.sensormanager
 type: application
 resources:
   configuration:
@@ -10,6 +10,7 @@ builder:
   resources:
     excludes:
       - "/test/**"
+      - "/localService/**"
   customTasks:
   - name: webide-extension-task-updateManifestJson
     beforeTask: generateManifestBundle
@@ -19,6 +20,6 @@ builder:
   - name: ui5-task-zipper
     afterTask: generateCachebusterInfo
     configuration:
-      archiveName: sensormanager
+      archiveName: keepcoolsensormanager
       additionalFiles:
       - xs-app.json

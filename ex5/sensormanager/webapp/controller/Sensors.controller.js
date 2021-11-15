@@ -2,15 +2,14 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/IconColor",
     "sap/m/MessageToast"
-],
-    function (Controller, IconColor, MessageToast) {
-        "use strict";
+], function (Controller, IconColor, MessageToast) {
+    "use strict";
 
         return Controller.extend("keepcool.sensormanager.controller.Sensors", {
             onInit: function() {
                 this.getSensorModel().dataLoaded().then(function() {
                     MessageToast.show(
-                        this.getOwnerComponent().getModel("i18n").getResourceBundle().getText("msgSensorDataLoaded"), 
+                        this.getOwnerComponent().getModel("i18n").getResourceBundle().getText("msgSensorDataLoaded"),
                         { closeOnBrowserNavigation: false });
                 }.bind(this));
             },

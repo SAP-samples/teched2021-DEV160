@@ -1,16 +1,16 @@
 sap.ui.define([
-    "sap/ui/core/Control"
+	"sap/ui/core/Control"
 ], function (Control) {
 	"use strict";
 	return Control.extend("keepcool.sensormanager.control.Thermometer", {
 		metadata : {
 			properties : {
 				value: {type : "float", defaultValue : 0},
-				color: {type : "sap.ui.core.CSSColor"}
+				color: {type : "string"}
 			}
 		},
-		
-        renderer : {
+
+		renderer : {
             apiVersion : 2,
             render : function (oRM, oControl) {
                 oRM.openStart("figure", oControl);
@@ -21,9 +21,9 @@ sap.ui.define([
                     oRM.openStart("figcaption");
                     oRM.class("thermometer-value");
                     oRM.style("background-color", oControl.getColor());
-				    oRM.style("box-shadow", "0 0 0 2px " + oControl.getColor());
+                    oRM.style("box-shadow", "0 0 0 2px " + oControl.getColor());
                     oRM.openEnd();
-                    oRM.text(oControl.getValue().toFixed(1));
+                    oRM.text(oControl.getValue().toFixed(1)); // the temperature value
                     oRM.close("figcaption");
 
                     oRM.openStart("div");

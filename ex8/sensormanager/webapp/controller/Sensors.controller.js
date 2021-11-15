@@ -4,9 +4,8 @@ sap.ui.define([
     "sap/m/MessageToast",
     "sap/ui/model/Filter",
     "sap/ui/core/Fragment"
-],
-    function (Controller, IconColor, MessageToast, Filter, Fragment) {
-        "use strict";
+], function (Controller, IconColor, MessageToast, Filter, Fragment) {
+    "use strict"
 
         return Controller.extend("keepcool.sensormanager.controller.Sensors", {
             onInit: function() {
@@ -14,7 +13,7 @@ sap.ui.define([
                 this._aStatusFilters = [];
                 this.getSensorModel().dataLoaded().then(function() {
                     MessageToast.show(
-                        this.getOwnerComponent().getModel("i18n").getResourceBundle().getText("msgSensorDataLoaded"), 
+                        this.getOwnerComponent().getModel("i18n").getResourceBundle().getText("msgSensorDataLoaded"),
                         { closeOnBrowserNavigation: false });
                 }.bind(this));
             },
@@ -47,6 +46,7 @@ sap.ui.define([
                 } else {
                     this._aStatusFilters = [];
                 }
+
                 oBinding.filter(this._aStatusFilters.concat(this._aCustomerFilters));
             },
             onCustomerSelect: function(){
@@ -83,7 +83,7 @@ sap.ui.define([
             navToSensorStatus: function(oEvent) {
                 var iSensorIndex = oEvent.getSource().getBindingContext("sensorModel").getProperty("index");
                 this.getOwnerComponent().getRouter().navTo("RouteSensorStatus", {index: iSensorIndex});
-            }                       
+            }
         });
     }
 );
