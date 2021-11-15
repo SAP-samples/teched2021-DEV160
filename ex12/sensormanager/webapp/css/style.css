@@ -12,7 +12,7 @@
 
 .thermometer-value {
     position: absolute;
-    bottom: -22px; 
+    bottom: -22px;
     left: -6px;
     border: 2px solid white;
     width: 22px;
@@ -21,7 +21,7 @@
     color: white;
     font-size: 13px;
     text-align: center;
-    padding-top: 4px; /*  to center the text */
+    padding-top: 4px;
 }
 
 .thermometer-level {

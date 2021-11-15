@@ -5,34 +5,35 @@ sap.ui.define([
 ], function (Controller, formatMessage, ValueColor) {
     "use strict";
 
-  return Controller.extend("keepcool.sensormanager.controller.SensorStatus", {
-      
-    formatMessage: formatMessage,
+    return Controller.extend("keepcool.sensormanager.controller.SensorStatus", {
 
-    onInit: function () {
-      this.getOwnerComponent().getRouter().getRoute("RouteSensorStatus").attachMatched(this.onRouteMatched, this);
-    },
+        formatMessage: formatMessage,
 
-    onRouteMatched: function (oEvent) {
-      this.getView().bindElement({
-          path: "/sensors/" + oEvent.getParameter("arguments").index,
-          model: "sensorModel"
-      });
-    },
+        onInit: function () {
+        this.getOwnerComponent().getRouter().getRoute("RouteSensorStatus").attachMatched(this.onRouteMatched, this);
+        },
 
-    navToSensors: function () {
-      this.getOwnerComponent().getRouter().navTo("RouteSensors");
-    },
+        onRouteMatched: function (oEvent) {
+        this.getView().bindElement({
+            path: "/sensors/" + oEvent.getParameter("arguments").index,
+            model: "sensorModel"
+        });
+        },
 
-  formatValueColor: function (oThreshold, iTemperature) {
-    oThreshold = oThreshold || {};
-    if (iTemperature < oThreshold.warm) {
-        return ValueColor.Neutral;
-    } else if (iTemperature >= oThreshold.warm && iTemperature < oThreshold.hot) {
-        return ValueColor.Critical;
-    } else {
-        return ValueColor.Error;
-    }
-  }
-  });
+        navToSensors: function () {
+            this.getOwnerComponent().getRouter().navTo("RouteSensors");
+        },
+
+        formatValueColor: function (oThreshold, iTemperature) {
+            oThreshold = oThreshold || {};
+            if (iTemperature < oThreshold.warm) {
+                return ValueColor.Neutral;
+            } else if (iTemperature >= oThreshold.warm && iTemperature < oThreshold.hot) {
+                return ValueColor.Critical;
+            } else {
+                return ValueColor.Error;
+            }
+        }
+
+    });
 });

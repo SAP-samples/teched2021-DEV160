@@ -10,42 +10,43 @@
         <content>
             <IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
                 <content>
-                    <f:GridList                         
-                        id="sensorsList" 
+                    <f:GridList
+                        id="sensorsList"
                         items="{path: 'sensorModel>/sensors', sorter: {path:'customer', group:true, descending: false}}"
                         noDataText="{i18n>noSensorDataText}">
-                        <f:customLayout>
-                            <grid:GridBoxLayout/>
-                        </f:customLayout>
-                        <f:items>
-                            <CustomListItem  type="Active">
+                            <f:customLayout>
+                                <grid:GridBoxLayout/>
+                            </f:customLayout>
+                            <f:items>
+                                <CustomListItem  type="Active">
                                 <layoutData>
-                                    <FlexItemData 
-                                        growFactor="1" 
+                                    <FlexItemData
+                                        growFactor="1"
                                         shrinkFactor="0"/>
                                 </layoutData>
                                 <HBox justifyContent="SpaceBetween">
-                                    <VBox 
-                                        justifyContent="SpaceBetween" 
+                                    <VBox
+                                        justifyContent="SpaceBetween"
                                         class="sapUiSmallMarginTop sapUiSmallMarginBegin">
                                         <Title text="{sensorModel>location}"/>
                                         <Label text="{i18n>distanceLabel}:"/>
                                     </VBox>
-                                    <core:Icon 
-                                        src="sap-icon://temperature" 
-                                        size="2.5rem" 
-                                        class="sapUiSmallMarginTop sapUiSmallMarginEnd"
-                                        color="{path: 'sensorModel>temperature/value', formatter:'.formatIconColor'}"/>
+                                    <core:Icon
+                                        src="sap-icon://temperature"
+                                        size="2.5rem"
+                                        color="{path: 'sensorModel>temperature/value', formatter:'.formatIconColor'}"
+                                        class="sapUiSmallMarginTop sapUiSmallMarginEnd"/>
                                 </HBox>
-                                <HBox 
-                                    justifyContent="SpaceBetween" 
+                                <HBox
+                                    justifyContent="SpaceBetween"
                                     class="sapUiTinyMarginTop sapUiSmallMarginBottom sapUiSmallMarginBeginEnd">
-                                    <ObjectNumber 
-                                        number="{sensorModel>distance}" 
+                                    <ObjectNumber
+                                        number="{sensorModel>distance}"
                                         unit="{i18n>distanceUnit}"/>
                                 </HBox>
-                            </CustomListItem>                        </f:items>
-                    </f:GridList>
+                            </CustomListItem>
+                            </f:items>
+                        </f:GridList>
                 </content>
             </IconTabBar>
         </content>

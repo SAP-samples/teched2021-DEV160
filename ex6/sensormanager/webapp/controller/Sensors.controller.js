@@ -3,15 +3,14 @@ sap.ui.define([
     "sap/ui/core/IconColor",
     "sap/m/MessageToast",
     "sap/ui/model/Filter"
-],
-    function (Controller, IconColor, MessageToast, Filter) {
-        "use strict";
+    ], function (Controller, IconColor, MessageToast, Filter) {
+    "use strict";
 
         return Controller.extend("keepcool.sensormanager.controller.Sensors", {
             onInit: function() {
                 this.getSensorModel().dataLoaded().then(function() {
                     MessageToast.show(
-                        this.getOwnerComponent().getModel("i18n").getResourceBundle().getText("msgSensorDataLoaded"), 
+                        this.getOwnerComponent().getModel("i18n").getResourceBundle().getText("msgSensorDataLoaded"),
                         { closeOnBrowserNavigation: false });
                 }.bind(this));
             },
@@ -47,6 +46,7 @@ sap.ui.define([
                 } else {
                     this._aStatusFilters = [];
                 }
+
                 oBinding.filter(this._aStatusFilters);
             }
         });

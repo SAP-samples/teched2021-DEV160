@@ -61,33 +61,6 @@
       "env": {
         "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/sensormanager\"}"
       }
-    },
-    {
-      "name": "sensormanager_added",
-      "cwd": "${workspaceFolder}",
-      "runtimeArgs": [
-        "run-script",
-        "start"
-      ],
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npm",
-      "args": [
-        "--",
-        "--ui5"
-      ],
-      "windows": {
-        "runtimeExecutable": "npm.cmd",
-        "args": [
-          "--",
-          "--ui5"
-        ]
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "env": {
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/sensormanager\"}"
-      }
     }
   ],
   "inputs": [

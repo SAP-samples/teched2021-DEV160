@@ -1,31 +1,36 @@
-specVersion: '2.4'
+specVersion: "2.5"
 metadata:
-  name: 'sensormanager'
+  name: keepcool.sensormanager
 type: application
 framework:
   name: SAPUI5
-  version: '1.93.0'
-  libraries: 
-    - name: sap.f
+  version: 1.96.0
+  libraries:
     - name: sap.m
+    - name: sap.ushell
+    - name: sap.f
     - name: sap.suite.ui.generic.template
     - name: sap.ui.comp
     - name: sap.ui.core
     - name: sap.ui.generic.app
     - name: sap.ui.table
-    - name: sap.ushell
     - name: themelib_sap_fiori_3
 server:
   customMiddleware:
-  - name: fiori-tools-proxy
-    afterMiddleware: compression
-    configuration:
-      ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
-      backend:
-      - path: /sap/opu/odata
-        url: http://localhost
-  - name: fiori-tools-appreload
-    afterMiddleware: compression
-    configuration:
-     port: 35729
-     path: webapp
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        backend:
+          - path: /sap
+            url: http://localhost
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        component: keepcool.sensormanager

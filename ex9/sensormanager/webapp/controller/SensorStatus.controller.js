@@ -1,7 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/base/strings/formatMessage",
-      "sap/m/ValueColor"
+  "sap/ui/core/mvc/Controller",
+  "sap/base/strings/formatMessage",
+  "sap/m/ValueColor"
 ], function (Controller, formatMessage, ValueColor) {
     "use strict";
 
@@ -21,9 +21,9 @@ sap.ui.define([
         },
 
         navToSensors: function () {
-        this.getOwnerComponent().getRouter().navTo("RouteSensors");
+            this.getOwnerComponent().getRouter().navTo("RouteSensors");
         },
-        
+
         formatValueColor: function (oThreshold, iTemperature) {
             oThreshold = oThreshold || {};
             if (iTemperature < oThreshold.warm) {

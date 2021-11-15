@@ -4,9 +4,9 @@
     <SelectDialog
         title="{i18n>titleSelectCustomer}"
         contentHeight="38.3%"
+        rememberSelections="true"
         confirm=".onCustomerSelectConfirm"
         liveChange=".onCustomerSelectChange"
-        rememberSelections="true"
         items="{
             path: 'sensorModel>/customers',
             sorter: {path:'name'}
