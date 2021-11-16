@@ -92,7 +92,7 @@ No known issues.
 The content of this repository is meant for a UI5 course. Only course teachers will make contributions to this repository. If you want to enhance the content of this repository feel free to fork it. Bug fixes are welcome, though.
 
 ## How to obtain support
-Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the Issues tab.
+Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## Stay in touch
 Stay in touch with the community by choosing your favourite channel.
