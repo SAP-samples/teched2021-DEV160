@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2021-DEV160)](https://api.reuse.software/info/github.com/SAP-samples/teched2021-DEV160)
+
 # DEV160 - Scale Application Development with SAPUI5
 
 ## Description
